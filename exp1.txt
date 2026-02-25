@@ -1,0 +1,418 @@
+SQL> desc deposit;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ ACTNO                                              VARCHAR2(5)
+ CNAME                                              VARCHAR2(15)
+ BNAME                                              VARCHAR2(15)
+ AMOUNT                                             NUMBER(9,2)
+ ADATE                                              DATE
+
+SQL> desc branch;
+ERROR:
+ORA-04043: object branch does not exist 
+
+
+SQL> create table branch;
+create table branch
+                  *
+ERROR at line 1:
+ORA-00906: missing left parenthesis 
+
+
+SQL> create table branch();
+create table branch()
+                    *
+ERROR at line 1:
+ORA-00904: : invalid identifier 
+
+
+SQL> create table branch(
+  2  bname  varchar2(15),
+  3  city  varchar2(15),
+  4  );
+)
+*
+ERROR at line 4:
+ORA-00904: : invalid identifier 
+
+
+SQL> create table branch(
+  2  bname varchar2(15),
+  3  city varchar2(15)
+  4  );
+
+Table created.
+
+SQL> create table customers (
+  2  cname varchar(15),
+  3  
+SQL> create table customers (
+  2  cname varchar2(15),
+  3  city varchar2(15)
+  4  );
+
+Table created.
+
+SQL> create table borrow(
+  2  loanno varchar2(5),
+  3  cname varchar2(15),
+  4  bname varchar2(15),
+  5  amount number(9,2)
+  6  );
+
+Table created.
+
+SQL> insert into deposit values('100','anil','vrce',1000,'01-mar-95');
+
+1 row created.
+
+SQL> insert into deposit values('101','sunil','ajni',5000,'04-jan-96');
+
+1 row created.
+
+SQL> insert into deposit values('102','mehul','karolbagh',3500,'17-nov-95');
+
+1 row created.
+
+SQL> insert into deposit values('104','madhuri','chandi',1200,'17-dec-95');
+
+1 row created.
+
+SQL> insert into deposit values('105','prmod','m g road,3000,'27-mar-96');
+ERROR:
+ORA-01756: quoted string not properly terminated 
+
+
+SQL> insert into deposit values('106','sandip','andheri',2000,'31-mar-96');
+
+1 row created.
+
+SQL> insert into deposit values('107','shivani','virar',1000,'05-sep-95');
+
+1 row created.
+
+SQL> insert into deposit values('108','kranti','nehur place',5000,'02-jul-95');
+
+1 row created.
+
+SQL> insert into deposit values('109','minu','powai',7000,10-aug-95');
+ERROR:
+ORA-01756: quoted string not properly terminated 
+
+
+SQL> insert into deposit values ('109','minu','powai',7000,'10-aug-95');
+
+1 row created.
+
+SQL> dsec deposit;
+SP2-0734: unknown command beginning "dsec depos..." - rest of line ignored.
+SQL> desc deposit;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ ACTNO                                              VARCHAR2(5)
+ CNAME                                              VARCHAR2(15)
+ BNAME                                              VARCHAR2(15)
+ AMOUNT                                             NUMBER(9,2)
+ ADATE                                              DATE
+
+SQL> select*from deposit;
+
+ACTNO CNAME           BNAME               AMOUNT ADATE                          
+----- --------------- --------------- ---------- ---------                      
+100   anil            vrce                  1000 01-MAR-95                      
+101   sunil           ajni                  5000 04-JAN-96                      
+102   mehul           karolbagh             3500 17-NOV-95                      
+104   madhuri         chandi                1200 17-DEC-95                      
+106   sandip          andheri               2000 31-MAR-96                      
+107   shivani         virar                 1000 05-SEP-95                      
+108   kranti          nehur place           5000 02-JUL-95                      
+109   minu            powai                 7000 10-AUG-95                      
+
+8 rows selected.
+
+SQL> insert into branch values ('vrce','nagpur');
+
+1 row created.
+
+SQL> insert into branch values('ajni','nagpur');
+
+1 row created.
+
+SQL> insert into branch values('karolbagh','delhi');
+
+1 row created.
+
+SQL> insert into branch values ('chandi','delhi');
+
+1 row created.
+
+SQL> insert into branch values('dharampeth','nagpur');
+
+1 row created.
+
+SQL> insert into branch values('m g road','banglore');
+
+1 row created.
+
+SQL> insert into branch values('andheri','bombay');
+
+1 row created.
+
+SQL> insert into branch values('virar','bombay');
+
+1 row created.
+
+SQL> select*from branch;
+
+BNAME           CITY                                                            
+--------------- ---------------                                                 
+vrce            nagpur                                                          
+ajni            nagpur                                                          
+karolbagh       delhi                                                           
+chandi          delhi                                                           
+dharampeth      nagpur                                                          
+m g road        banglore                                                        
+andheri         bombay                                                          
+virar           bombay                                                          
+
+8 rows selected.
+
+SQL> insert into customers values('anil','calcutta');
+
+1 row created.
+
+SQL> insert into customers values('sunil','delhi');
+
+1 row created.
+
+SQL> insert into customers values('mehul','baroda');
+
+1 row created.
+
+SQL> insert into customers values ('mandar','patna');
+
+1 row created.
+
+SQL> insert into customers values('madhuri','nagpur');
+
+1 row created.
+
+SQL> insert into customers values ('pramod','nagpur');
+
+1 row created.
+
+SQL> insert into customers values
+  2  ('
+  3  l
+  4  fk);
+ERROR:
+ORA-01756: quoted string not properly terminated 
+
+
+SQL> insert into customers values('sandip','surat');
+
+1 row created.
+
+SQL> insert into customers values('shivani','bombay')
+  2  );
+)
+*
+ERROR at line 2:
+ORA-00933: SQL command not properly ended 
+
+
+SQL> insert into customers values('shivani','bombay');
+
+1 row created.
+
+SQL> select*from customers;
+
+CNAME           CITY                                                            
+--------------- ---------------                                                 
+anil            calcutta                                                        
+sunil           delhi                                                           
+mehul           baroda                                                          
+mandar          patna                                                           
+madhuri         nagpur                                                          
+pramod          nagpur                                                          
+sandip          surat                                                           
+shivani         bombay                                                          
+
+8 rows selected.
+
+SQL> insert into borrow values('201'
+  2  ,'0
+  3  0)
+  4  
+SQL> 
+SQL> 
+SQL> insert into borrow values('201','anil','vrce',1000);
+
+1 row created.
+
+SQL> insert into borrow values('206','mehul','ajni',5000);
+
+1 row created.
+
+SQL> insert into borrow values('311','sunil','dharampeth',3000)
+  2  ;
+
+1 row created.
+
+SQL> insert into borrow values('311','sunil','dharampeth',3000);
+
+1 row created.
+
+SQL> insert into borrow values('321','madhuri','andheri',2000);
+
+1 row created.
+
+SQL> insert into orrow values('375','prmod','virar',800);
+insert into orrow values('375','prmod','virar',800)
+            *
+ERROR at line 1:
+ORA-00942: table or view does not exist 
+
+
+SQL> insert into borrow values('375','prmod','virar',8000);
+
+1 row created.
+
+SQL> insert into borrow values('481','kranti','nehru place',3000);
+
+1 row created.
+
+SQL> insert into borrow values('201','anil','vrce',1000);
+
+1 row created.
+
+SQL> insert into borrow values('206','mehul','ajni',5000);
+
+1 row created.
+
+SQL> insert into borrow values('311','sunil','dharampeth',3000);
+
+1 row created.
+
+SQL> insert into borrow values('321','madhuri','andheri',2000);
+
+1 row created.
+
+SQL> select*from borrow;
+
+LOANN CNAME           BNAME               AMOUNT                                
+----- --------------- --------------- ----------                                
+201   anil            vrce                  1000                                
+206   mehul           ajni                  5000                                
+311   sunil           dharampeth            3000                                
+311   sunil           dharampeth            3000                                
+321   madhuri         andheri               2000                                
+375   prmod           virar                 8000                                
+481   kranti          nehru place           3000                                
+201   anil            vrce                  1000                                
+206   mehul           ajni                  5000                                
+311   sunil           dharampeth            3000                                
+321   madhuri         andheri               2000                                
+
+11 rows selected.
+
+SQL> desc deposit;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ ACTNO                                              VARCHAR2(5)
+ CNAME                                              VARCHAR2(15)
+ BNAME                                              VARCHAR2(15)
+ AMOUNT                                             NUMBER(9,2)
+ ADATE                                              DATE
+
+SQL> desc branch;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ BNAME                                              VARCHAR2(15)
+ CITY                                               VARCHAR2(15)
+
+SQL> desc borrow;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ LOANNO                                             VARCHAR2(5)
+ CNAME                                              VARCHAR2(15)
+ BNAME                                              VARCHAR2(15)
+ AMOUNT                                             NUMBER(9,2)
+
+SQL> desc customers;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ CNAME                                              VARCHAR2(15)
+ CITY                                               VARCHAR2(15)
+
+SQL> select *from deposit;
+
+ACTNO CNAME           BNAME               AMOUNT ADATE                          
+----- --------------- --------------- ---------- ---------                      
+100   anil            vrce                  1000 01-MAR-95                      
+101   sunil           ajni                  5000 04-JAN-96                      
+102   mehul           karolbagh             3500 17-NOV-95                      
+104   madhuri         chandi                1200 17-DEC-95                      
+106   sandip          andheri               2000 31-MAR-96                      
+107   shivani         virar                 1000 05-SEP-95                      
+108   kranti          nehur place           5000 02-JUL-95                      
+109   minu            powai                 7000 10-AUG-95                      
+
+8 rows selected.
+
+SQL> select*from borrow;
+
+LOANN CNAME           BNAME               AMOUNT                                
+----- --------------- --------------- ----------                                
+201   anil            vrce                  1000                                
+206   mehul           ajni                  5000                                
+311   sunil           dharampeth            3000                                
+311   sunil           dharampeth            3000                                
+321   madhuri         andheri               2000                                
+375   prmod           virar                 8000                                
+481   kranti          nehru place           3000                                
+201   anil            vrce                  1000                                
+206   mehul           ajni                  5000                                
+311   sunil           dharampeth            3000                                
+321   madhuri         andheri               2000                                
+
+11 rows selected.
+
+SQL> select *from cuetomers;
+select *from cuetomers
+             *
+ERROR at line 1:
+ORA-00942: table or view does not exist 
+
+
+SQL> select*from customers;
+
+CNAME           CITY                                                            
+--------------- ---------------                                                 
+anil            calcutta                                                        
+sunil           delhi                                                           
+mehul           baroda                                                          
+mandar          patna                                                           
+madhuri         nagpur                                                          
+pramod          nagpur                                                          
+sandip          surat                                                           
+shivani         bombay                                                          
+
+8 rows selected.
+
+SQL> select *from branch;
+
+BNAME           CITY                                                            
+--------------- ---------------                                                 
+vrce            nagpur                                                          
+ajni            nagpur                                                          
+karolbagh       delhi                                                           
+chandi          delhi                                                           
+dharampeth      nagpur                                                          
+m g road        banglore                                                        
+andheri         bombay                                                          
+virar           bombay                                                          
+
+8 rows selected.
+
+SQL> spool off ;
