@@ -1,0 +1,449 @@
+SQL> create table EMPLOYEE(
+  2  EMPNO NUMBER(10),
+  3  EMPNAME VARCHAR(15),
+  4  JOB VARCHAR(15),
+  5  MGR NUMBER(10),
+  6  HIREDATE DATE,
+  7  SAL NUMBER(10),
+  8  COMM NUMBER(10),
+  9  DEPTNO NUMBER(10));
+
+Table created.
+
+SQL> INSERT INTO EMPLOYEE VALUES('&EMPNO','&EMPNAME','&JOB','&MGR','&HIREDATE','&SAL','&COMM','&DEPTNO');
+Enter value for empno: 7369
+Enter value for empname: SMITH
+Enter value for job: CLERK
+Enter value for mgr: 7902
+Enter value for hiredate: 17-DEC-00
+Enter value for sal: 8000
+Enter value for comm: 
+Enter value for deptno: 20
+old   1: INSERT INTO EMPLOYEE VALUES('&EMPNO','&EMPNAME','&JOB','&MGR','&HIREDATE','&SAL','&COMM','&DEPTNO')
+new   1: INSERT INTO EMPLOYEE VALUES('7369','SMITH','CLERK','7902','17-DEC-00','8000','','20')
+
+1 row created.
+
+SQL> INSERT INTO EMPLOYEE VALUES('&EMPNO','&EMPNAME','&JOB','&MGR','&HIREDATE','&SAL','&COMM','&DEPTNO');
+Enter value for empno: 7499
+Enter value for empname: ALLEN
+Enter value for job: SALESMAN
+Enter value for mgr: 7698
+Enter value for hiredate: 20-FEB-01
+Enter value for sal: 16000
+Enter value for comm: 300
+Enter value for deptno: 30
+old   1: INSERT INTO EMPLOYEE VALUES('&EMPNO','&EMPNAME','&JOB','&MGR','&HIREDATE','&SAL','&COMM','&DEPTNO')
+new   1: INSERT INTO EMPLOYEE VALUES('7499','ALLEN','SALESMAN','7698','20-FEB-01','16000','300','30')
+
+1 row created.
+
+SQL> INSERT INTO EMPLOYEE VALUES('&EMPNO','&EMPNAME','&JOB','&MGR','&HIREDATE','&SAL','&COMM','&DEPTNO');
+Enter value for empno: 7521
+Enter value for empname: WARD
+Enter value for job: SALESMAN
+Enter value for mgr: 7698
+Enter value for hiredate: 20-FEB-01
+Enter value for sal: 12500
+Enter value for comm: 500
+Enter value for deptno: 30
+old   1: INSERT INTO EMPLOYEE VALUES('&EMPNO','&EMPNAME','&JOB','&MGR','&HIREDATE','&SAL','&COMM','&DEPTNO')
+new   1: INSERT INTO EMPLOYEE VALUES('7521','WARD','SALESMAN','7698','20-FEB-01','12500','500','30')
+
+1 row created.
+
+SQL> INSERT INTO EMPLOYEE VALUES('&EMPNO','&EMPNAME','&JOB','&MGR','&HIREDATE','&SAL','&COMM','&DEPTNO');
+Enter value for empno: 7566
+Enter value for empname: JONES
+Enter value for job: MANAGER
+Enter value for mgr: 7839
+Enter value for hiredate: 02-APR-01
+Enter value for sal: 29750
+Enter value for comm: 
+Enter value for deptno: 20
+old   1: INSERT INTO EMPLOYEE VALUES('&EMPNO','&EMPNAME','&JOB','&MGR','&HIREDATE','&SAL','&COMM','&DEPTNO')
+new   1: INSERT INTO EMPLOYEE VALUES('7566','JONES','MANAGER','7839','02-APR-01','29750','','20')
+
+1 row created.
+
+SQL> SELECT * FROM EMPLOYEE;
+
+     EMPNO EMPNAME         JOB                    MGR HIREDATE         SAL      
+---------- --------------- --------------- ---------- --------- ----------      
+      COMM     DEPTNO                                                           
+---------- ----------                                                           
+      7369 SMITH           CLERK                 7902 17-DEC-00       8000      
+                   20                                                           
+                                                                                
+      7499 ALLEN           SALESMAN              7698 20-FEB-01      16000      
+       300         30                                                           
+                                                                                
+      7521 WARD            SALESMAN              7698 20-FEB-01      12500      
+       500         30                                                           
+                                                                                
+
+     EMPNO EMPNAME         JOB                    MGR HIREDATE         SAL      
+---------- --------------- --------------- ---------- --------- ----------      
+      COMM     DEPTNO                                                           
+---------- ----------                                                           
+      7566 JONES           MANAGER               7839 02-APR-01      29750      
+                   20                                                           
+                                                                                
+
+SQL> INSERT INTO EMPLOYEE VALUES('&EMPNO','&EMPNAME','&JOB','&MGR','&HIREDATE','&SAL','&COMM','&DEPTNO');
+Enter value for empno: 7654
+Enter value for empname: MARTIN
+Enter value for job: SALESMAN
+Enter value for mgr: 7698
+Enter value for hiredate: 20-SEP-01
+Enter value for sal: 12500
+Enter value for comm: 1400
+Enter value for deptno: 30
+old   1: INSERT INTO EMPLOYEE VALUES('&EMPNO','&EMPNAME','&JOB','&MGR','&HIREDATE','&SAL','&COMM','&DEPTNO')
+new   1: INSERT INTO EMPLOYEE VALUES('7654','MARTIN','SALESMAN','7698','20-SEP-01','12500','1400','30')
+
+1 row created.
+
+SQL> INSERT INTO EMPLOYEE VALUES('&EMPNO','&EMPNAME','&JOB','&MGR','&HIREDATE','&SAL','&COMM','&DEPTNO');
+Enter value for empno: 7698
+Enter value for empname: BLAKE
+Enter value for job: MANAGER
+Enter value for mgr: 7839
+Enter value for hiredate: 01-MAY-01
+Enter value for sal: 28500
+Enter value for comm: 
+Enter value for deptno: 30
+old   1: INSERT INTO EMPLOYEE VALUES('&EMPNO','&EMPNAME','&JOB','&MGR','&HIREDATE','&SAL','&COMM','&DEPTNO')
+new   1: INSERT INTO EMPLOYEE VALUES('7698','BLAKE','MANAGER','7839','01-MAY-01','28500','','30')
+
+1 row created.
+
+SQL> INSERT INTO EMPLOYEE VALUES('&EMPNO','&EMPNAME','&JOB','&MGR','&HIREDATE','&SAL','&COMM','&DEPTNO');
+Enter value for empno: 7782
+Enter value for empname: CLARK
+Enter value for job: MANAGER
+Enter value for mgr: 7839
+Enter value for hiredate: 09-JUN-01
+Enter value for sal: 24500
+Enter value for comm: 
+Enter value for deptno: 10
+old   1: INSERT INTO EMPLOYEE VALUES('&EMPNO','&EMPNAME','&JOB','&MGR','&HIREDATE','&SAL','&COMM','&DEPTNO')
+new   1: INSERT INTO EMPLOYEE VALUES('7782','CLARK','MANAGER','7839','09-JUN-01','24500','','10')
+
+1 row created.
+
+SQL> INSERT INTO EMPLOYEE VALUES('&EMPNO','&EMPNAME','&JOB','&MGR','&HIREDATE','&SAL','&COMM','&DEPTNO');
+Enter value for empno: 7788
+Enter value for empname: SCOTT
+Enter value for job: ANALYST
+Enter value for mgr: 7566
+Enter value for hiredate: 19-APR-07
+Enter value for sal: 30000
+Enter value for comm: 
+Enter value for deptno: 20
+old   1: INSERT INTO EMPLOYEE VALUES('&EMPNO','&EMPNAME','&JOB','&MGR','&HIREDATE','&SAL','&COMM','&DEPTNO')
+new   1: INSERT INTO EMPLOYEE VALUES('7788','SCOTT','ANALYST','7566','19-APR-07','30000','','20')
+
+1 row created.
+
+SQL> INSERT INTO EMPLOYEE VALUES('&EMPNO','&EMPNAME','&JOB','&MGR','&HIREDATE','&SAL','&COMM','&DEPTNO');
+Enter value for empno: 7839
+Enter value for empname: KING
+Enter value for job: PRESIDENT
+Enter value for mgr: 
+Enter value for hiredate: 17-NOV-01
+Enter value for sal: 50000
+Enter value for comm: 
+Enter value for deptno: 10
+old   1: INSERT INTO EMPLOYEE VALUES('&EMPNO','&EMPNAME','&JOB','&MGR','&HIREDATE','&SAL','&COMM','&DEPTNO')
+new   1: INSERT INTO EMPLOYEE VALUES('7839','KING','PRESIDENT','','17-NOV-01','50000','','10')
+
+1 row created.
+
+SQL> INSERT INTO EMPLOYEE VALUES('&EMPNO','&EMPNAME','&JOB','&MGR','&HIREDATE','&SAL','&COMM','&DEPTNO');
+Enter value for empno: 7844
+Enter value for empname: TURNER
+Enter value for job: SALESMAN
+Enter value for mgr: 7698
+Enter value for hiredate: 08-SEP-01
+Enter value for sal: 15000
+Enter value for comm: 
+Enter value for deptno: 10
+old   1: INSERT INTO EMPLOYEE VALUES('&EMPNO','&EMPNAME','&JOB','&MGR','&HIREDATE','&SAL','&COMM','&DEPTNO')
+new   1: INSERT INTO EMPLOYEE VALUES('7844','TURNER','SALESMAN','7698','08-SEP-01','15000','','10')
+
+1 row created.
+
+SQL> INSERT INTO EMPLOYEE VALUES('&EMPNO','&EMPNAME','&JOB','&MGR','&HIREDATE','&SAL','&COMM','&DEPTNO');
+Enter value for empno: 7876
+Enter value for empname: ADAMS
+Enter value for job: CLERK
+Enter value for mgr: 7788
+Enter value for hiredate: 23-MAY-07
+Enter value for sal: 11000
+Enter value for comm: 
+Enter value for deptno: 30
+old   1: INSERT INTO EMPLOYEE VALUES('&EMPNO','&EMPNAME','&JOB','&MGR','&HIREDATE','&SAL','&COMM','&DEPTNO')
+new   1: INSERT INTO EMPLOYEE VALUES('7876','ADAMS','CLERK','7788','23-MAY-07','11000','','30')
+
+1 row created.
+
+SQL> INSERT INTO EMPLOYEE VALUES('&EMPNO','&EMPNAME','&JOB','&MGR','&HIREDATE','&SAL','&COMM','&DEPTNO');
+Enter value for empno: 7900
+Enter value for empname: JAMES
+Enter value for job: CLERK
+Enter value for mgr: 7698
+Enter value for hiredate: 03-DEC-01
+Enter value for sal: 9500
+Enter value for comm: 
+Enter value for deptno: 30
+old   1: INSERT INTO EMPLOYEE VALUES('&EMPNO','&EMPNAME','&JOB','&MGR','&HIREDATE','&SAL','&COMM','&DEPTNO')
+new   1: INSERT INTO EMPLOYEE VALUES('7900','JAMES','CLERK','7698','03-DEC-01','9500','','30')
+
+1 row created.
+
+SQL> INSERT INTO EMPLOYEE VALUES('&EMPNO','&EMPNAME','&JOB','&MGR','&HIREDATE','&SAL','&COMM','&DEPTNO');
+Enter value for empno: 7902
+Enter value for empname: FORD
+Enter value for job: ANALYST
+Enter value for mgr: 7566
+Enter value for hiredate: 03-DEC-01
+Enter value for sal: 30000
+Enter value for comm: 
+Enter value for deptno: 20
+old   1: INSERT INTO EMPLOYEE VALUES('&EMPNO','&EMPNAME','&JOB','&MGR','&HIREDATE','&SAL','&COMM','&DEPTNO')
+new   1: INSERT INTO EMPLOYEE VALUES('7902','FORD','ANALYST','7566','03-DEC-01','30000','','20')
+
+1 row created.
+
+
+
+
+SQL> UPDATE EMPLOYEE SET DEPTNO='30' WHERE EMPNO='7876';
+
+1 row updated.
+
+SQL> SELECT * FROM EMPLOYEE;
+
+     EMPNO EMPNAME         JOB                    MGR HIREDATE         SAL      
+---------- --------------- --------------- ---------- --------- ----------      
+      COMM     DEPTNO                                                           
+---------- ----------                                                           
+      7369 SMITH           CLERK                 7902 17-DEC-00       8000      
+                   20                                                           
+                                                                                
+      7499 ALLEN           SALESMAN              7698 20-FEB-01      16000      
+       300         30                                                           
+                                                                                
+      7521 WARD            SALESMAN              7698 20-FEB-01      12500      
+       500         30                                                           
+                                                                                
+
+     EMPNO EMPNAME         JOB                    MGR HIREDATE         SAL      
+---------- --------------- --------------- ---------- --------- ----------      
+      COMM     DEPTNO                                                           
+---------- ----------                                                           
+      7566 JONES           MANAGER               7839 02-APR-01      29750      
+                   20                                                           
+                                                                                
+      7654 MARTIN          SALESMAN              7698 20-SEP-01      12500      
+      1400         30                                                           
+                                                                                
+      7698 BLAKE           MANAGER               7839 01-MAY-01      28500      
+                   30                                                           
+                                                                                
+
+     EMPNO EMPNAME         JOB                    MGR HIREDATE         SAL      
+---------- --------------- --------------- ---------- --------- ----------      
+      COMM     DEPTNO                                                           
+---------- ----------                                                           
+      7782 CLARK           MANAGER               7839 09-JUN-01      24500      
+                   10                                                           
+                                                                                
+      7788 SCOTT           ANALYST               7566 19-APR-07      30000      
+                   20                                                           
+                                                                                
+      7839 KING            PRESIDENT                  17-NOV-01      50000      
+                   10                                                           
+                                                                                
+
+     EMPNO EMPNAME         JOB                    MGR HIREDATE         SAL      
+---------- --------------- --------------- ---------- --------- ----------      
+      COMM     DEPTNO                                                           
+---------- ----------                                                           
+      7844 TURNER          SALESMAN              7698 08-SEP-01      15000      
+                   10                                                           
+                                                                                
+      7876 ADAMS           CLERK                 7788 23-MAY-07      11000      
+                   30                                                           
+                                                                                
+      7900 JAMES           CLERK                 7698 03-DEC-01       9500      
+                   30                                                           
+                                                                                
+
+     EMPNO EMPNAME         JOB                    MGR HIREDATE         SAL      
+---------- --------------- --------------- ---------- --------- ----------      
+      COMM     DEPTNO                                                           
+---------- ----------                                                           
+      7902 FORD            ANALYST               7566 03-DEC-01      30000      
+                   20                                                           
+                                                                                
+
+13 rows selected.
+
+ADD 1000 IN SALARY.
+
+SQL> SELECT EMPNAME,SAL+1000 FROM EMPLOYEE;
+
+EMPNAME           SAL+1000                                                      
+--------------- ----------                                                      
+SMITH                 9000                                                      
+ALLEN                17000                                                      
+WARD                 13500                                                      
+JONES                30750                                                      
+MARTIN               13500                                                      
+BLAKE                29500                                                      
+CLARK                25500                                                      
+SCOTT                31000                                                      
+KING                 51000                                                      
+TURNER               16000                                                      
+ADAMS                12000                                                      
+
+EMPNAME           SAL+1000                                                      
+--------------- ----------                                                      
+JAMES                10500                                                      
+FORD                 31000                                                      
+
+13 rows selected.
+
+DISPLAY EMPNAME,SAL,COMM AND SUBTRACT 100 FROM COMMISION FEILD
+SQL> SELECT EMPNAME,SAL,COMM-100 FROM EMPLOYEE;
+
+EMPNAME                SAL   COMM-100                                           
+--------------- ---------- ----------                                           
+SMITH                 8000                                                      
+ALLEN                16000        200                                           
+WARD                 12500        400                                           
+JONES                29750                                                      
+MARTIN               12500       1300                                           
+BLAKE                28500                                                      
+CLARK                24500                                                      
+SCOTT                30000                                                      
+KING                 50000                                                      
+TURNER               15000                                                      
+ADAMS                11000                                                      
+
+EMPNAME                SAL   COMM-100                                           
+--------------- ---------- ----------                                           
+JAMES                 9500                                                      
+FORD                 30000                                                      
+
+13 rows selected.
+
+DISPLAY EMPNAME,SAL,DEPTNO AND MULTIPLY IT BY 2
+SQL> SELECT EMPNAME,SAL,DEPTNO*100 FROM EMPLOYEE;
+
+EMPNAME                SAL DEPTNO*100                                           
+--------------- ---------- ----------                                           
+SMITH                 8000       2000                                           
+ALLEN                16000       3000                                           
+WARD                 12500       3000                                           
+JONES                29750       2000                                           
+MARTIN               12500       3000                                           
+BLAKE                28500       3000                                           
+CLARK                24500       1000                                           
+SCOTT                30000       2000                                           
+KING                 50000       1000                                           
+TURNER               15000       1000                                           
+ADAMS                11000       3000                                           
+
+EMPNAME                SAL DEPTNO*100                                           
+--------------- ---------- ----------                                           
+JAMES                 9500       3000                                           
+FORD                 30000       2000                                           
+
+13 rows selected.
+
+DISPLAY EPNAME WITH THEIR DAILY WAGE
+SQL> SELECT EMPNAME,SAL/30 FROM EMPLOYEE;
+
+EMPNAME             SAL/30                                                      
+--------------- ----------                                                      
+SMITH           266.666667                                                      
+ALLEN           533.333333                                                      
+WARD            416.666667                                                      
+JONES           991.666667                                                      
+MARTIN          416.666667                                                      
+BLAKE                  950                                                      
+CLARK           816.666667                                                      
+SCOTT                 1000                                                      
+KING            1666.66667                                                      
+TURNER                 500                                                      
+ADAMS           366.666667                                                      
+
+EMPNAME             SAL/30                                                      
+--------------- ----------                                                      
+JAMES           316.666667                                                      
+FORD                  1000                                                      
+
+13 rows selected.
+
+DISPLAY EMPNAME,SAL WITH 5% INCREMENT 
+SQL> SELECT EMPNAME,SAL+(SAL*5/100) FROM EMPLOYEE;
+
+EMPNAME         SAL+(SAL*5/100)                                                 
+--------------- ---------------                                                 
+SMITH                      8400                                                 
+ALLEN                     16800                                                 
+WARD                      13125                                                 
+JONES                   31237.5                                                 
+MARTIN                    13125                                                 
+BLAKE                     29925                                                 
+CLARK                     25725                                                 
+SCOTT                     31500                                                 
+KING                      52500                                                 
+TURNER                    15750                                                 
+ADAMS                     11550                                                 
+
+EMPNAME         SAL+(SAL*5/100)                                                 
+--------------- ---------------                                                 
+JAMES                      9975                                                 
+FORD                      31500                                                 
+
+13 rows selected.
+
+SQL> SET LINESIZE 150
+SQL> SET PAGESIZE 50
+SQL> SET TRIMSPOOL ON
+SQL> SET TRIMOUT ON
+SQL> SELECT EMPNAME,SAL+(SAL*5/100) FROM EMPLOYEE;
+
+EMPNAME         SAL+(SAL*5/100)
+--------------- ---------------
+SMITH                      8400
+ALLEN                     16800
+WARD                      13125
+JONES                   31237.5
+MARTIN                    13125
+BLAKE                     29925
+CLARK                     25725
+SCOTT                     31500
+KING                      52500
+TURNER                    15750
+ADAMS                     11550
+JAMES                      9975
+FORD                      31500
+
+13 rows selected.
+
+SQL> SPOOL OFF;
+
+
+
+
+
+IMP
+SQL> SET LINESIZE 150
+SQL> SET PAGESIZE 50
+SQL> SET TRIMSPOOL ON
+SQL> SET TRIMOUT ON
